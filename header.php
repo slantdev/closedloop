@@ -59,7 +59,13 @@
                 </a>
               <?php endif; ?>
             </div>
-            <div class="text-xs md:text-sm text-right leading-none"><span class="inline-block md:inline-block">Closed Loop Australia.</span> <a href="https://www.closedloop.co.nz" class="inline-block md:inline-block text-darkblue underline hover:no-underline">Go to New Zealand site</a></div>
+            <div class="text-xs md:text-sm text-right leading-none">
+              <?php if (strpos(home_url(), '.nz') !== false) : ?>
+                <span class="inline-block md:inline-block">Closed Loop NZ.</span> <a href="https://www.closedloop.com.au" class="inline-block md:inline-block text-darkblue underline hover:no-underline">Go to Australia site</a>
+              <?php else : ?>
+                <span class="inline-block md:inline-block">Closed Loop Australia.</span> <a href="https://www.closedloop.co.nz" class="inline-block md:inline-block text-darkblue underline hover:no-underline">Go to New Zealand site</a>
+              <?php endif; ?>
+            </div>
           </div>
         </div>
       </div>

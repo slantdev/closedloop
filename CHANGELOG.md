@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.2.0] - 2026-02-14
 
+### Added
+- Conditional site switcher in the header to handle Australia (.com.au) and New Zealand (.co.nz) domains.
+
 ### Fixed
 - PHP 8.3 compatibility issues including undefined array keys, undefined variables, and array offset warnings across various theme files.
 - Safe `count()` usage by adding `is_countable()` checks in several components and sections.
