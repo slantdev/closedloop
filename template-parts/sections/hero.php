@@ -61,19 +61,19 @@ function cl_hero($atts = array())
 
   if ($buttons) {
     $output .= '<div class="mt-6 ' . $button_container_class . '">';
-    $button_count = count($buttons);
+    $button_count = is_countable($buttons) ? count($buttons) : 0;
     $button_margin = "";
     if ($button_count > 1) {
       $button_margin = "mr-4 mb-4";
     }
     foreach ($buttons as $button) {
-      $button_text = $button['button']['button_text'];
-      $button_text_color = $button['button']['button_text_color'];
-      $button_color = $button['button']['button_color'];
-      $button_size = $button['button']['button_size'];
-      $button_link_title = $button['button']['button_link']['title'];
-      $button_link_url = $button['button']['button_link']['url'];
-      $button_link_target = $button['button']['button_link']['target'];
+      $button_text = $button['button']['button_text'] ?? '';
+      $button_text_color = $button['button']['button_text_color'] ?? '';
+      $button_color = $button['button']['button_color'] ?? '';
+      $button_size = $button['button']['button_size'] ?? '';
+      $button_link_title = $button['button']['button_link']['title'] ?? '';
+      $button_link_url = $button['button']['button_link']['url'] ?? '';
+      $button_link_target = $button['button']['button_link']['target'] ?? '';
       $button_class = '';
       $button_style = '';
       if ($button_color) {

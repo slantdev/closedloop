@@ -86,6 +86,7 @@
                 <img class="site-logo logo-white" src="<?php echo closedloop_asset('images/logo-closed-loop-white.png') ?>" width="200px" height="62px" alt="Logo Closed Loop" />
               </a>
             </div>
+            <?php $icon_container_class = isset($icon_container_class) ? $icon_container_class : ''; ?>
             <div class="header-nav flex flex-nowrap items-center gap-x-4 <?php echo $icon_container_class ?>">
               <?php if ($email_link) : ?>
                 <a href="mailto:<?php echo $email_link ?>" target="_blank" class="hidden md:inline-block">

@@ -1,9 +1,9 @@
 <?php
 
 //$icons = get_sub_field('icons');
-$max_width = $args['max_width'];
-$grid_cols = $args['grid_cols'];
-$grid_x_gap = $args['grid_x_gap'];
+$max_width = $args['max_width'] ?? 'none';
+$grid_cols = $args['grid_cols'] ?? '';
+$grid_x_gap = $args['grid_x_gap'] ?? '';
 $grid_class = '';
 if ($grid_cols) {
   $grid_class .= $grid_cols . ' ';
@@ -19,9 +19,9 @@ if (have_rows('icons')) :
   echo '<div class="grid mt-4 md:mt-8 ' . $grid_class . '">';
   while (have_rows('icons')) : the_row();
     $icon_image = get_sub_field('icon_image');
-    $icon_src = $icon_image['id'];
-    $icon_id = $icon_image['id'];
-    $icon_type = $icon_image['mime_type'];
+    $icon_src = $icon_image['id'] ?? '';
+    $icon_id = $icon_image['id'] ?? '';
+    $icon_type = $icon_image['mime_type'] ?? '';
     $icon_text = get_sub_field('icon_text');
     $icon_color = get_sub_field('icon_color');
     $text_class = '';

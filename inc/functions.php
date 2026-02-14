@@ -21,12 +21,14 @@ function cl_change_term_request($query)
   $tax_name = 'product_category'; // specify you taxonomy name here, it can be also 'category' or 'post_tag'
 
   // Request for child terms differs, we should make an additional check
-  if ($query['attachment']) :
+  if (isset($query['attachment'])) :
     $include_children = true;
     $name = $query['attachment'];
-  else :
+  elseif (isset($query['name'])) :
     $include_children = false;
     $name = $query['name'];
+  else :
+    return $query;
   endif;
 
 

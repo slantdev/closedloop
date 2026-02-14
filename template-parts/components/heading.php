@@ -8,8 +8,8 @@ if ($term_id) {
 }
 $color_theme = get_field('color_theme', $the_id);
 
-$field = $args['field'];
-$class = $args['class'];
+$field = $args['field'] ?? null;
+$class = $args['class'] ?? '';
 
 //echo $field;
 if ($field) {
@@ -17,15 +17,15 @@ if ($field) {
 } else {
   $heading = get_sub_field('heading');
 }
-$heading_text = $heading['text'];
-$heading_color = $heading['color'];
+$heading_text = $heading['text'] ?? '';
+$heading_color = $heading['color'] ?? null;
 if (!$heading_color) {
   $heading_color = $color_theme;
 }
-$heading_size = $heading['size'];
-$heading_tag = $heading['tag'];
-$heading_alignment = $heading['alignment'];
-$heading_mb = $heading['margin_bottom'];
+$heading_size = $heading['size'] ?? 'md';
+$heading_tag = $heading['tag'] ?? 'h2';
+$heading_alignment = $heading['alignment'] ?? 'left';
+$heading_mb = $heading['margin_bottom'] ?? 'sm';
 $heading_class = 'font-bold leading[1.1em] ' . $class;
 switch ($heading_size) {
   case "xs":

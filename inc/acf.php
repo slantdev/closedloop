@@ -3,15 +3,19 @@
 /*
  * Add Site Settings
  */
-if (function_exists('acf_add_options_page')) {
+add_action('init', 'cl_register_acf_options_pages');
+function cl_register_acf_options_pages()
+{
+  if (function_exists('acf_add_options_page')) {
 
-  acf_add_options_page(array(
-    'page_title'   => 'Site Settings',
-    'menu_title'  => 'Site Settings',
-    'menu_slug'   => 'site-settings',
-    'capability'  => 'edit_posts',
-    'redirect'    => false
-  ));
+    acf_add_options_page(array(
+      'page_title'   => 'Site Settings',
+      'menu_title'  => 'Site Settings',
+      'menu_slug'   => 'site-settings',
+      'capability'  => 'edit_posts',
+      'redirect'    => false
+    ));
+  }
 }
 
 /*

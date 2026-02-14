@@ -1,5 +1,5 @@
 <?php
-$field = $args['field'];
+$field = $args['field'] ?? null;
 
 if ($field) {
   $description = get_sub_field($field);
@@ -7,10 +7,10 @@ if ($field) {
   $description = get_sub_field('description');
 }
 
-$description_content = $description['content'];
-$description_color = $description['color'];
-$description_alignment = $description['alignment'];
-$description_max_width = $description['max_width'];
+$description_content = $description['content'] ?? '';
+$description_color = $description['color'] ?? '';
+$description_alignment = $description['alignment'] ?? 'left';
+$description_max_width = $description['max_width'] ?? '';
 $description_class = '';
 switch ($description_alignment) {
   case "left":

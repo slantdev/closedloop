@@ -2,9 +2,9 @@
 include get_template_directory() . '/template-parts/layout/section-settings.php';
 //$color_theme = get_field('color_theme');
 $blog_settings = get_sub_field('blog_settings');
-$show_blog_filter = $blog_settings['show_blog_filter'];
-$limit_by_category = $blog_settings['limit_by_category'];
-$posts_per_page = $blog_settings['posts_per_page'];
+$show_blog_filter = $blog_settings['show_blog_filter'] ?? false;
+$limit_by_category = $blog_settings['limit_by_category'] ?? null;
+$posts_per_page = $blog_settings['posts_per_page'] ?? 3;
 // if (!$posts_per_page) {
 //   $posts_per_page = '-1';
 // }
@@ -40,12 +40,15 @@ $posts_per_page = $blog_settings['posts_per_page'];
                   if (!$limit_by_category) {
                     $limit_by_category = 'all';
                   }
-                  $taxonomies = get_terms(array(
+                  $tax_args = array(
                     'taxonomy' => 'category',
                     'hide_empty' => false,
-                    'include' => $limit_by_category
-                  ));
-                  if (!empty($taxonomies)) :
+                  );
+                  if ($limit_by_category !== 'all') {
+                    $tax_args['include'] = $limit_by_category;
+                  }
+                  $taxonomies = get_terms($tax_args);
+                  if (!empty($taxonomies) && !is_wp_error($taxonomies)) :
                     $output = '';
                     foreach ($taxonomies as $category) {
                       $output .= '<a class="blog-dropdown-item text-base py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="#" data-id="' . esc_attr($category->term_id) . '" data-perpage="' . $posts_per_page . '">' . esc_attr($category->name) . '</a>';

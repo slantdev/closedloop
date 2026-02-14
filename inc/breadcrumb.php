@@ -19,17 +19,20 @@ function cl_yoast_seo_breadcrumb_append_link($links)
     array_splice($links, 1, -2, $breadcrumb);
   } elseif (is_singular('products-services')) {
     $term_obj = get_the_terms($post->ID, 'product_category');
-    $term_parent = $term_obj[0]->parent;
-    $term_parents[] = array(
-      'text' => $term_obj[0]->name,
-      'url' => get_term_link($term_obj[0]->term_id, 'product_category')
-    );
-    if ($term_parent) {
-      $term_ancestor = get_term($term_parent, 'product_category');
+    $term_parents = array();
+    if ($term_obj && !is_wp_error($term_obj)) {
+      $term_parent = $term_obj[0]->parent;
       $term_parents[] = array(
-        'text' => $term_ancestor->name,
-        'url' => get_term_link($term_ancestor->term_id, 'product_category')
+        'text' => $term_obj[0]->name,
+        'url' => get_term_link($term_obj[0]->term_id, 'product_category')
       );
+      if ($term_parent) {
+        $term_ancestor = get_term($term_parent, 'product_category');
+        $term_parents[] = array(
+          'text' => $term_ancestor->name,
+          'url' => get_term_link($term_ancestor->term_id, 'product_category')
+        );
+      }
     }
     $term_parents = count($term_parents) > 1 ? array_reverse($term_parents) : $term_parents;
     unset($links[1]);

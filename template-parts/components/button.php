@@ -18,7 +18,7 @@ switch ($buttons_alignment) {
 $buttons = get_sub_field($field . 'buttons');
 if ($buttons) {
   echo '<div class="mb-6 xl:mb-0 ' . $button_container_class . '">';
-  $button_count = count(get_sub_field($field . 'buttons'));
+  $button_count = is_countable($buttons) ? count($buttons) : 0;
   $button_margin = "";
   if ($button_count > 1) {
     $button_margin = "mr-4 mb-4";
