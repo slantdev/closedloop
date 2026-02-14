@@ -1,0 +1,436 @@
+<?php
+
+/**
+ * Template Name: Homepage
+ * Template Post Type: page
+ *
+ */
+
+get_header('', array('header_type' => 'no-bg'));
+
+echo '<div class="-mt-[119px] lg:-mt-[140px] 2xl:-mt-[180px]">';
+get_template_part('template-parts/page-builder');
+echo '</div>';
+
+function cl_hero_content($atts = array())
+{
+  $atts = shortcode_atts(array(
+    'title'  => '',
+    'description' => '',
+    'img' => '',
+    'overlay' => '',
+    'media' => ''
+  ), $atts);
+
+  $title = $atts['title'];
+  $description = $atts['description'];
+  $overlay = $atts['overlay'];
+  $media = $atts['media'];
+  $mediaType = wp_check_filetype($atts['media'])['type'];
+
+  if (empty($title) && empty($description))
+    return;
+
+  $output = '';
+  $output .= '<div class="container mx-auto h-full relative z-20 px-10 md:px-12 xl:px-8 lg:pt-[100px]">';
+  $output .= '<div class="flex h-full items-center">';
+  $output .= '<div class="w-full lg:w-6/12">';
+  $output .= '<div class="max-w-lg">';
+  $output .= '<h2 class="text-[36px] lg:text-[50px] font-bold text-white leading-tight mb-4 pl-[0.25em]">';
+  $output .= '<span class="title-highlight" style="background-color: #1aad90; box-shadow: 0.25em 0 0 #1aad90, -0.25em 0 0 #1aad90;">' . $title . '</span>';
+  $output .= '</h2>';
+  $output .= '<p class="text-white">' . $description . '</p>';
+  $output .= '</div>';
+  $output .= '</div>';
+  $output .= '</div>';
+  $output .= '</div>';
+  $output .= '<div class="swiper-bg absolute inset-0">';
+  $output .= '<div class="absolute inset-0 z-10" style="background-color: ' . $overlay . '"></div>';
+  if ($media) {
+    if ($mediaType == 'video/mp4') {
+      $output .= '<video id="background-video" class="absolute inset-0 h-full w-full object-cover z-0" autoplay loop muted>';
+      $output .= '<source src="' . $media . '" type="video/mp4">';
+      $output .= '</video>';
+    } else {
+      $output .= '<img src="' . $media . '">';
+    }
+  }
+  $output .= '</div>';
+
+  return $output;
+}
+?>
+
+<?php if (have_rows('homepage_hero')) : ?>
+  <section id="homepage-hero-old" class="relative h-screen overflow-hidden">
+    <div class="absolute left-0 right-0 bottom-0 w-full">
+      <div class="relative container mx-auto max-w-6xl">
+        <div class="absolute -right-6 -bottom-5 z-10">
+          <svg class="rotate-0 text-neutral-100" xmlns="http://www.w3.org/2000/svg" width="370.26" height="225.77" viewBox="0 0 370.26 100">
+            <path d="M154.58,4.45C78.4,20.64,18.07,82.31,3.54,158.82A197.78,197.78,0,0,0,.75,213.26a13.78,13.78,0,0,0,18,11.81l.94-.31a14,14,0,0,0,9.33-14.61,169.89,169.89,0,0,1,2.6-46.56C44.46,97.72,97.23,44.86,163.05,31.83A167.48,167.48,0,0,1,310.81,73.74l-12.37,9.4a10.72,10.72,0,0,0,1.95,18.24L355,126.85a10.72,10.72,0,0,0,15.24-10.13v-.19a9.2,9.2,0,0,0-.13-1.15l-9.88-59.47a10.71,10.71,0,0,0-17.05-6.77l-9.47,7.19c-37.93-37.11-90.5-59-147.55-56.06a203.6,203.6,0,0,0-31.58,4.18" fill="currentColor" />
+          </svg>
+        </div>
+      </div>
+      <div class="flex relative z-10">
+        <div class="w-1/5 h-5 bg-coral bg-opacity-90"></div>
+        <div class="w-1/5 h-5 bg-turquoise bg-opacity-90"></div>
+        <div class="w-1/5 h-5 bg-deepskyblue bg-opacity-90"></div>
+        <div class="w-1/5 h-5 bg-limegreen bg-opacity-90"></div>
+        <div class="w-1/5 h-5 bg-yellowgreen bg-opacity-90"></div>
+      </div>
+    </div>
+    <?php while (have_rows('homepage_hero')) : the_row(); ?>
+      <div class="relative shrink-0 w-full h-full">
+        <?php
+        echo cl_hero_content(
+          array(
+            'title' => get_sub_field('heading'),
+            'description' => get_sub_field('description'),
+            'overlay' => get_sub_field('background_overlay'),
+            'media' => get_sub_field('background_media')
+          )
+        );
+        ?>
+      </div>
+    <?php endwhile; ?>
+  </section>
+<?php endif; ?>
+
+<?php if (have_rows('select_service')) : ?>
+  <section class="bg-neutral-100 py-12 md:py-16">
+    <div class="container mx-auto">
+      <div class="flex flex-wrap justify-center items-center">
+        <div class="mb-4 md:mb-0 md:mr-8"><span class="text-darkblue text-2xl font-bold leading-tight">I'm looking for</span></div>
+        <div class="flex justify-center items-center">
+          <div class="dropdown relative mr-2 md:mr-3">
+            <button class="dropdown-toggle px-4 py-4 leading-tight rounded-lg focus:outline-none focus:ring-0 transition duration-150 ease-in-out flex items-center justify-between whitespace-nowrap xl:min-w-[360px] text-lg bg-white border border-solid border-[#E3E3E3] text-[#868686] w-full max-w-[380px] tracking-wider font-light lg:px-8" type="button" id="dropdownSelect" data-bs-toggle="dropdown" aria-expanded="false" style="color: <?php echo $color_theme ?>">
+              <span>Select Service</span>
+              <svg class="w-6 ml-6" xmlns="http://www.w3.org/2000/svg" width="28.707" height="14.707" viewBox="0 0 28.707 14.707">
+                <g id="Group_234" data-name="Group 234" transform="translate(-2908.146 -887.146)">
+                  <line id="Line_3" data-name="Line 3" x2="14" y2="14" transform="translate(2908.5 887.5)" fill="none" stroke="currentColor" stroke-width="1" />
+                  <line id="Line_4" data-name="Line 4" x1="14" y2="14" transform="translate(2922.5 887.5)" fill="none" stroke="currentColor" stroke-width="1" />
+                </g>
+              </svg>
+            </button>
+            <ul class="dropdown-menu min-w-max w-full absolute bg-white text-base z-50 py-2 list-none text-left rounded-lg shadow-lg mt-1 hidden m-0 bg-clip-padding border-none" aria-labelledby="dropdownSelect">
+              <?php while (have_rows('select_service')) : the_row(); ?>
+                <li>
+                  <a class="dropdown-item text-base py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100" href="<?php echo get_sub_field('service_link')['url'] ?>"><?php echo get_sub_field('service_title') ?></a>
+                </li>
+              <?php endwhile; ?>
+            </ul>
+          </div>
+          <button type="button" class="bg-darkblue p-4 py-3 md:px-8 text-white text-2xl rounded-lg leading-7 hover:brightness-125">Go</button>
+        </div>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
+
+<!-- About -->
+<?php
+$sustainability_partner = get_field('sustainability_partner');
+if ($sustainability_partner) {
+  $heading_1 = $sustainability_partner['heading_1'];
+  $heading_2 = $sustainability_partner['heading_2'];
+  $description_1 = $sustainability_partner['description_1'];
+  $description_2 = $sustainability_partner['description_2'];
+  $button_text = $sustainability_partner['button_text'];
+  $button_link = $sustainability_partner['button_link'];
+?>
+  <section class="bg-white">
+    <div class="container mx-auto max-w-5xl relative pt-44 pb-24 md:pb-36 overflow-clip xl:overflow-visible">
+      <div class="absolute -right-16 2xl:-right-32 top-0 z-0">
+        <svg class="rotate-180 text-neutral-100" xmlns="http://www.w3.org/2000/svg" width="370.26" height="225.77" viewBox="0 0 370.26 80">
+          <path d="M154.58,4.45C78.4,20.64,18.07,82.31,3.54,158.82A197.78,197.78,0,0,0,.75,213.26a13.78,13.78,0,0,0,18,11.81l.94-.31a14,14,0,0,0,9.33-14.61,169.89,169.89,0,0,1,2.6-46.56C44.46,97.72,97.23,44.86,163.05,31.83A167.48,167.48,0,0,1,310.81,73.74l-12.37,9.4a10.72,10.72,0,0,0,1.95,18.24L355,126.85a10.72,10.72,0,0,0,15.24-10.13v-.19a9.2,9.2,0,0,0-.13-1.15l-9.88-59.47a10.71,10.71,0,0,0-17.05-6.77l-9.47,7.19c-37.93-37.11-90.5-59-147.55-56.06a203.6,203.6,0,0,0-31.58,4.18" fill="currentColor" />
+        </svg>
+      </div>
+      <div class="relative md:px-5 z-10">
+        <?php if ($heading_1) { ?>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-x-20">
+            <div class="text-seagreen text-4xl font-bold"><?php echo $heading_1 ?></div>
+            <div><?php echo $description_1 ?></div>
+          </div>
+        <?php } ?>
+        <?php if ($heading_2) { ?>
+          <div class="md:max-w-[300px] border-b border-gray-500 my-10 md:my-20 mx-auto"></div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-x-20">
+            <div class="text-seagreen text-4xl font-bold md:order-2"><?php echo $heading_2 ?></div>
+            <div class="md:order-1"><?php echo $description_2 ?></div>
+          </div>
+        <?php } ?>
+        <?php if ($button_link['title'] && $button_link['url']) { ?>
+          <div class="flex justify-center mt-12 md:mt-24">
+            <a href="<?php echo $button_link['url'] ?>" class="inline-block px-8 py-3 rounded-lg bg-coral text-white text-sm uppercase font-medium"><?php echo $button_link['title'] ?></a>
+          </div>
+        <?php } ?>
+      </div>
+    </div>
+  </section>
+<?php } ?>
+
+<?php
+$pioneering = get_field('pioneering');
+if ($pioneering) :
+  //preint_r($pioneering['icons']);
+?>
+  <section class="bg-neutral-100">
+    <div class="container mx-auto py-20 md:py-36">
+      <h2 class="text-seagreen text-center text-4xl font-bold mb-12 md:mb-24">We are pioneering the Circular Economy</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-12">
+        <?php
+        foreach ($pioneering['icons'] as $icon) {
+          $icon_image = $icon['icon_image'];
+          $icon_title = $icon['icon_title'];
+          $icon_description = $icon['icon_description'];
+        ?>
+          <div class="flex flex-col items-center">
+            <img class="mx-auto mb-4" src="<?php echo $icon_image['url'] ?>" alt="<?php echo $icon_title ?>">
+            <h4 class="text-3xl xl:text-[40px] text-darkblue font-bold text-center mb-2 xl:mb-8 tracking-tighter"><?php echo $icon_title ?></h4>
+            <div class="max-w-[240px]">
+              <div class="text-xl leading-tight xl:text-2xl text-neutral-500 text-center font-bold"><?php echo $icon_description ?></div>
+            </div>
+          </div>
+        <?php } ?>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
+
+<!-- What We Do -->
+<?php
+if (have_rows('content_cards')) :
+  $wwd_heading = get_field('wwd_heading');
+  $wwd_description = get_field('wwd_description');
+  $wwd_button = get_field('wwd_button');
+?>
+  <section class="bg-aquamarine">
+    <div class="py-20 lg:py-36 relative flex flex-wrap w-full lg:flex-nowrap">
+      <div class="wwd-button-prev text-white absolute top-1/2 left-0 bg-gray-300 bg-opacity-75 hover:bg-opacity-100 z-10 w-16 h-16 -translate-y-2/3 justify-center items-center hidden lg:flex">
+        <svg class="rotate-180" xmlns="http://www.w3.org/2000/svg" width="10.553" height="18.277" viewBox="0 0 10.553 18.277">
+          <path d="M102.474,67.483l8.432,8.432-8.432,8.431" transform="translate(-101.766 -66.776)" fill="none" stroke="#fff" stroke-width="2" />
+        </svg>
+      </div>
+      <div class="w-full flex justify-end text-white lg:w-1/3 lg:px-8 xl:pl-10 xl:pr-0">
+        <div class="w-full px-4 flex flex-col relative mb-8 lg:mb-0 lg:px-0 lg:max-w-[380px]">
+          <?php if ($wwd_heading) { ?>
+            <h2 class="text-4xl font-bold mb-4"><?php echo $wwd_heading ?></h2>
+          <?php } ?>
+          <?php if ($wwd_description) { ?>
+            <div class="mt-auto mb-4 lg:mb-20">
+              <?php echo $wwd_description ?>
+            </div>
+          <?php } ?>
+          <?php if ($wwd_button['button_link'] && $wwd_button['button_text']) { ?>
+            <div class="mb-2"><a href="<?php echo $wwd_button['button_link'] ?>" class="inline-block bg-white rounded-md uppercase font-medium text-sm text-darkblue px-8 py-3 shadow"><?php echo $wwd_button['button_text'] ?></a></div>
+          <?php } ?>
+        </div>
+      </div>
+      <div class="w-full lg:w-2/3 relative xl:pl-20">
+        <div class="wwd-button-prev text-white absolute top-1/2 left-0 bg-gray-300 bg-opacity-75 hover:bg-opacity-100 z-10 justify-center items-center w-6 h-12 -translate-y-3/4 hidden lg:hidden lg:w-16 lg:h-16 lg:-translate-y-2/3">
+          <svg class="rotate-180" xmlns="http://www.w3.org/2000/svg" width="10.553" height="18.277" viewBox="0 0 10.553 18.277">
+            <path d="M102.474,67.483l8.432,8.432-8.432,8.431" transform="translate(-101.766 -66.776)" fill="none" stroke="#fff" stroke-width="2" />
+          </svg>
+        </div>
+        <div class="wwd-button-next text-white absolute top-1/2 right-0 bg-opacity-95 hover:bg-opacity-100 z-10 justify-center items-center w-6 h-12 -translate-y-3/4 hidden lg:flex lg:w-16 lg:h-16 lg:-translate-y-2/3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10.553" height="18.277" viewBox="0 0 10.553 18.277">
+            <path d="M102.474,67.483l8.432,8.432-8.432,8.431" transform="translate(-101.766 -66.776)" fill="none" stroke="#fff" stroke-width="2" />
+          </svg>
+        </div>
+        <div class="swiper whatWeDoSwiper px-4 pb-12 lg:px-0 lg:pb-24">
+          <div class="swiper-wrapper">
+            <?php
+            while (have_rows('content_cards')) : the_row();
+              $card_title = get_sub_field('card')['title'];
+              $card_image = get_sub_field('card')['image']['url'];
+              $card_caption = get_sub_field('card')['image_caption'];
+              $card_excerpt = get_sub_field('card')['description'];
+              $card_link = get_sub_field('card')['link'];
+            ?>
+              <div class="swiper-slide max-w-[380px]">
+                <?php
+                $args = array(
+                  'img_src' => $card_image,
+                  'img_caption' => $card_caption,
+                  'title' => $card_title,
+                  'excerpt' => $card_excerpt,
+                  'plus_sign' => false,
+                  'link' => $card_link
+                );
+                echo cl_card($args);
+                ?>
+              </div>
+            <?php endwhile; ?>
+          </div>
+          <div class="swiper-pagination px-4 lg:px-0"></div>
+        </div>
+        <script>
+          var whatWeDoSwiper = new Swiper(".whatWeDoSwiper", {
+            slidesPerView: "auto",
+            spaceBetween: 16,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".wwd-button-next",
+              prevEl: ".wwd-button-prev",
+            },
+            breakpoints: {
+              768: {
+                slidesPerView: "auto",
+                spaceBetween: 24
+              },
+              1200: {
+                slidesPerView: "auto",
+                spaceBetween: 36
+              },
+            }
+          });
+        </script>
+        <style>
+          .whatWeDoSwiper {
+            padding-bottom: 60px;
+
+            @media (min-width: 1024) {
+              padding-bottom: 100px;
+            }
+          }
+
+          .whatWeDoSwiper .swiper-pagination {
+            padding-left: 1rem;
+            padding-right: 1rem;
+
+            @media (min-width: 1024) {
+              padding-left: 0px;
+              padding-right: 0px;
+            }
+          }
+
+          .whatWeDoSwiper.swiper-horizontal>.swiper-pagination-bullets,
+          .whatWeDoSwiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+            bottom: 0px;
+            text-align: left;
+          }
+
+          .whatWeDoSwiper .swiper-pagination-bullet {
+            width: 20px;
+            height: 10px;
+            border-radius: 50px;
+            background-color: white;
+            transition: all 500ms ease-in;
+          }
+
+          .whatWeDoSwiper .swiper-pagination-bullet-active {
+            width: 60px;
+            background-color: #074c6c;
+          }
+        </style>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
+
+<!-- Logos -->
+<?php
+$impact = get_field('impact');
+if ($impact) {
+  $heading = $impact['heading'];
+  $logos = $impact['logo'];
+?>
+  <section class="bg-white">
+    <div class="container mx-auto py-16 md:py-36">
+      <h2 class="text-seagreen text-center text-4xl font-bold mb-8 md:mb-24">We've made an impact with...</h2>
+      <div class="logo-grid md:mb-12 max-w-6xl mx-auto">
+        <?php foreach ($logos as $logo) : ?>
+          <div class="w-20 h-20 md:w-32 md:h-32 flex-none">
+            <img src="<?php echo $logo['url'] ?>" />
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+<?php } ?>
+
+<?php
+$cs_heading = get_field('cs_heading');
+$case_study = get_field('case_study');
+$title = $case_study['title'];
+$subtitle = $case_study['subtitle'];
+$description = $case_study['description'];
+$button_text = $case_study['button']['button_text'];
+$button_link = $case_study['button']['button_link'];
+$image = $case_study['image'];
+if ($title) {
+?>
+  <section class="bg-neutral-100">
+    <div class="container mx-auto py-16 md:py-36">
+      <?php if ($cs_heading) { ?>
+        <h2 class="text-seagreen text-center text-4xl font-bold mb-12 lg:mb-24"><?php echo $cs_heading ?></h2>
+      <?php } ?>
+      <div class="flex flex-wrap md:flex-nowrap gap-x-8 items-center">
+        <div class="w-full order-2 md:w-1/2 md:order-1">
+          <?php if ($subtitle) { ?>
+            <h3 class="font-bold text-xl uppercase mt-8 md:mt-0 md:text-2xl"><?php echo $subtitle ?></h3>
+          <?php } ?>
+          <?php if ($title) { ?>
+            <h3 class="text-3xl font-bold leading-[1.1em] text-darkblue mb-6 mt-6 md:mb-8 md:mt-12 md:text-4xl"><?php echo $title ?></h3>
+          <?php } ?>
+          <?php if ($description) { ?>
+            <div class="mb-8"><?php echo $description ?></div>
+          <?php } ?>
+          <?php if ($button_link) { ?>
+            <a href="<?php echo $button_link ?>" class="px-8 py-3 rounded-md bg-coral text-white uppercase inline-block text-sm"><?php echo $button_text ?></a>
+          <?php } ?>
+        </div>
+        <?php if ($image) { ?>
+          <div class="w-full order-1 md:w-1/2 md:order-2">
+            <img src="<?php echo $image['url'] ?>" class="rounded-full max-w-full xl:max-w-xl ml-auto" />
+          </div>
+        <?php } ?>
+      </div>
+    </div>
+  </section>
+
+<?php } ?>
+
+<?php
+$subscribe = get_field('subscribe');
+$heading = $subscribe['heading'];
+$description = $subscribe['description'];
+if ($subscribe) {
+?>
+  <section class="border-t border-solid border-neutral-100">
+    <div class="container mx-auto py-16 md:py-36">
+      <div class="flex flex-wrap md:flex-nowrap gap-x-8">
+        <div class="w-full md:w-1/2">
+          <div class="md:max-w-sm">
+            <?php if ($heading) { ?>
+              <h2 class="text-seagreen text-3xl md:text-4xl font-bold mb-6 md:mb-8"><?php echo $heading ?></h2>
+            <?php } ?>
+            <?php if ($description) { ?>
+              <div><?php echo $description ?></div>
+            <?php } ?>
+          </div>
+        </div>
+        <div class="w-full mt-6 md:mt-0 md:w-1/2">
+          <form>
+            <div class="flex flex-wrap xl:flex-nowrap xl:gap-x-6 xl:mb-8">
+              <div class="w-full xl:w-1/2 mb-4 xl:mb-0"><input type="text" placeholder="First Name*" class="w-full bg-neutral-100 border border-neutral-300 rounded-md py-2 px-4" /></div>
+              <div class="w-full xl:w-1/2 mb-4 xl:mb-0"><input type="text" placeholder="Last Name*" class="w-full bg-neutral-100 border border-neutral-300 rounded-md py-2 px-4" /></div>
+            </div>
+            <div class="md:mb-8">
+              <input type="email" placeholder="Email*" class="w-full bg-neutral-100 border border-neutral-300 rounded-md py-2 px-4 mb-4 md:mb-0" />
+            </div>
+            <div>
+              <button type="submit" class="px-8 py-3 rounded-md bg-coral text-white uppercase inline-block text-sm">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+<?php } ?>
+
+
+<?php get_footer(); ?>

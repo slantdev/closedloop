@@ -1,0 +1,16 @@
+.container-wide {
+  max-width: 1280px;
+  @apply px-4 lg:px-6;
+}
+.logo-grid {
+  /* display: grid;
+  grid-template-columns: 128px 128px 128px 128px 128px;
+  grid-template-columns: repeat(5, 128px);
+  grid-template-rows: auto;
+  column-gap: 36px;
+  justify-content: center; */
+  @apply flex flex-wrap justify-center items-center gap-x-8 gap-y-8 md:gap-x-24 md:gap-y-16;
+  > .logo-item {
+    @apply flex-none;
+  }
+}

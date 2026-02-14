@@ -1,0 +1,172 @@
+{
+  "version": 1,
+  "settings": {
+    "layout": {
+      "contentSize": "960px",
+      "wideSize": "1136px"
+    },
+    "color": {
+      "palette": [
+        {
+          "name": "Primary",
+          "slug": "primary",
+          "color": "#03a687"
+        },
+        {
+          "name": "Secondary",
+          "slug": "secondary",
+          "color": "#f15f3f"
+        },
+        {
+          "name": "Body",
+          "slug": "body",
+          "color": "#1a1d4b"
+        },
+        {
+          "name": "Light",
+          "slug": "light",
+          "color": "#F9FAFB"
+        },
+        {
+          "name": "CL-Alice-Blue",
+          "slug": "alice-blue",
+          "color": "#EDF1F5"
+        },
+        {
+          "name": "CL-Aquamarine",
+          "slug": "aquamarine",
+          "color": "#03a687"
+        },
+        {
+          "name": "CL-Light-Aquamarine",
+          "slug": "aquamarine-light",
+          "color": "#90DBDE"
+        },
+        {
+          "name": "CL-DarkBlue",
+          "slug": "darkblue",
+          "color": "#004d6d"
+        },
+        {
+          "name": "CL-Coral",
+          "slug": "coral",
+          "color": "#F15F3F"
+        },
+        {
+          "name": "CL-Coral-Light",
+          "slug": "coral-light",
+          "color": "#FAB7AD"
+        },
+        {
+          "name": "CL-LightSalmon",
+          "slug": "lightsalmon",
+          "color": "#FAB7AD"
+        },
+        {
+          "name": "CL-Turquoise",
+          "slug": "turquoise",
+          "color": "#65c8ce"
+        },
+        {
+          "name": "CL-DeepSkyBlue",
+          "slug": "deepskyblue",
+          "color": "#35b0e5"
+        },
+        {
+          "name": "CL-SeaGreen",
+          "slug": "seagreen",
+          "color": "#03a687"
+        },
+        {
+          "name": "CL-LimeGreen",
+          "slug": "limegreen",
+          "color": "#2ab673"
+        },
+        {
+          "name": "CL-YellowGreen",
+          "slug": "yellowgreen",
+          "color": "#95c93d"
+        },
+        {
+          "name": "CL-YellowGreen-Light",
+          "slug": "yellowgreen-light",
+          "color": "#CFEB9A"
+        },
+        {
+          "name": "Dark Navy",
+          "slug": "darknavy",
+          "color": "#1a1d4b"
+        },
+        {
+          "name": "Light Navy",
+          "slug": "lightnavy",
+          "color": "#004d6d"
+        },
+        {
+          "name": "Teal Green",
+          "slug": "tealgreen",
+          "color": "#03a687"
+        },
+        {
+          "name": "Pastel Green",
+          "slug": "pastelgreen",
+          "color": "#2ab673"
+        },
+        {
+          "name": "Organic Aqua",
+          "slug": "organicaqua",
+          "color": "#65c8ce"
+        },
+        {
+          "name": "Service Blue",
+          "slug": "serviceblue",
+          "color": "#35b0e5"
+        },
+        {
+          "name": "Upcycled Green",
+          "slug": "upcycledgreen",
+          "color": "#95c93d"
+        },
+        {
+          "name": "Packaged Orange",
+          "slug": "packagedorange",
+          "color": "#f15f3f"
+        }
+      ]
+    },
+    "typography": {
+      "fontSizes": [
+        {
+          "name": "Small",
+          "slug": "small",
+          "size": "0.875rem"
+        },
+        {
+          "slug": "regular",
+          "name": "Regular",
+          "size": "1.5rem"
+        },
+        {
+          "slug": "large",
+          "name": "Large",
+          "size": "1.125rem"
+        },
+        {
+          "slug": "xl",
+          "name": "XL",
+          "size": "1.25rem"
+        },
+        {
+          "slug": "xxl",
+          "name": "2XL",
+          "size": "1.5rem"
+        },
+        {
+          "slug": "xxxl",
+          "name": "3XL",
+          "size": "1.875rem"
+        }
+      ]
+    }
+  }
+}

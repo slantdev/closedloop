@@ -1,0 +1,39 @@
+.has-submenu {
+  > a {
+    @apply relative pr-9;
+    &::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 4px 0 4px 6px;
+      border-color: transparent transparent transparent #000000;
+      @apply absolute -translate-y-1 top-1/2 right-6;
+    }
+    &:hover {
+      &::after {
+        border-color: transparent transparent transparent #000000;
+      }
+    }
+  }
+  &.hovered {
+    > a {
+      @apply bg-white font-bold;
+    }
+  }
+  .submenu {
+    .has-submenu {
+      &.hovered {
+        > a {
+          @apply bg-white font-normal text-primary;
+        }
+      }
+    }
+  }
+}
+.mega-menu-overlay {
+  @apply -z-20;
+  &.active {
+    @apply z-30;
+  }
+}

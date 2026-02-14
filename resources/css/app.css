@@ -1,0 +1,13 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* @import '../../node_modules/swiper/swiper-bundle.css'; */
+
+@import 'partials/layout.css';
+@import 'partials/header.css';
+@import 'partials/typography.css';
+@import 'partials/forms.css';
+@import 'partials/elements.css';
+@import 'partials/megamenu.css';
+@import 'partials/swiper.css';
+@import 'custom.css';

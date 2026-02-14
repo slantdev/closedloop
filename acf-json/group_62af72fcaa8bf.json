@@ -1,0 +1,1146 @@
+{
+    "key": "group_62af72fcaa8bf",
+    "title": "Section Builder",
+    "fields": [
+        {
+            "key": "field_62af730d73313",
+            "label": "Section",
+            "name": "section",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "acfe_flexible_advanced": 1,
+            "acfe_flexible_stylised_button": 1,
+            "acfe_flexible_layouts_templates": 1,
+            "acfe_flexible_layouts_previews": 1,
+            "acfe_flexible_layouts_thumbnails": 1,
+            "acfe_flexible_layouts_settings": 0,
+            "acfe_flexible_async": [],
+            "acfe_flexible_add_actions": [
+                "title",
+                "toggle",
+                "copy",
+                "close"
+            ],
+            "acfe_flexible_remove_button": [],
+            "acfe_flexible_modal_edit": {
+                "acfe_flexible_modal_edit_enabled": "1",
+                "acfe_flexible_modal_edit_size": "large"
+            },
+            "acfe_flexible_modal": {
+                "acfe_flexible_modal_enabled": "1",
+                "acfe_flexible_modal_title": "",
+                "acfe_flexible_modal_size": "full",
+                "acfe_flexible_modal_col": "5",
+                "acfe_flexible_modal_categories": "0"
+            },
+            "layouts": {
+                "layout_62b22a4b76133": {
+                    "key": "layout_62b22a4b76133",
+                    "name": "blog_posts",
+                    "label": "Blog Posts",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62b22a4b76134",
+                            "label": "Blog Posts",
+                            "name": "blog_posts",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "clone": [
+                                "group_62e6b4a252f87"
+                            ],
+                            "display": "seamless",
+                            "layout": "",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "acfe_settings": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/blog_posts\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "xlarge",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_62e6b4f23d090": {
+                    "key": "layout_62e6b4f23d090",
+                    "name": "cards_slide_image",
+                    "label": "Cards with Slide Image",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62e6b4f23d091",
+                            "label": "Cards with Slide Image",
+                            "name": "cards_slide_image",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "clone": [
+                                "group_62e9d8816cf4f"
+                            ],
+                            "display": "seamless",
+                            "layout": "",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "acfe_settings": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/cards_slide_image\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_62e9da833ec25": {
+                    "key": "layout_62e9da833ec25",
+                    "name": "case_studies",
+                    "label": "Case Studies",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62e9da833ec26",
+                            "label": "Case Studies",
+                            "name": "case_studies",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "clone": [
+                                "group_62d181f55316e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "acfe_seamless_style": 0,
+                            "acfe_clone_modal": 0,
+                            "acfe_clone_modal_close": 0,
+                            "acfe_clone_modal_button": "",
+                            "acfe_clone_modal_size": "large",
+                            "acfe_settings": {
+                                "acfcloneindex": {
+                                    "acfe_settings_location": "",
+                                    "acfe_settings_settings": {
+                                        "acfcloneindex": {
+                                            "acfe_settings_setting_type": "required",
+                                            "acfe_settings_setting_name": "",
+                                            "acfe_settings_setting_operator": "true",
+                                            "acfe_settings_setting_value": ""
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/case_studies\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_62d1821d348de": {
+                    "key": "layout_62d1821d348de",
+                    "name": "contact_form",
+                    "label": "Contact Form",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62d1821d348df",
+                            "label": "Contact Form",
+                            "name": "contact_form",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_62b22564586ac"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "acfe_seamless_style": 0,
+                            "acfe_clone_modal": 0,
+                            "acfe_clone_modal_close": 0,
+                            "acfe_clone_modal_button": "",
+                            "acfe_clone_modal_size": "large"
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/contact_form\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_62b22a6f76135": {
+                    "key": "layout_62b22a6f76135",
+                    "name": "content_card",
+                    "label": "Content + Card Slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62b22a6f76136",
+                            "label": "Content Card",
+                            "name": "content_card",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_62b2257c0f539"
+                            ],
+                            "display": "seamless",
+                            "layout": "",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/content_card\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_62e1834238167": {
+                    "key": "layout_62e1834238167",
+                    "name": "custom_cards",
+                    "label": "Custom Cards",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62e1834238168",
+                            "label": "Custom Cards",
+                            "name": "custom_cards",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "clone": [
+                                "group_62e1828d376e7"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "acfe_settings": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/custom_cards\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_62b2927aa6a6a": {
+                    "key": "layout_62b2927aa6a6a",
+                    "name": "faq",
+                    "label": "FAQ",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62b2927aa6a6b",
+                            "label": "Accordion",
+                            "name": "accordion",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_62b22518ab02c"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "acfe_seamless_style": 0,
+                            "acfe_clone_modal": 0,
+                            "acfe_clone_modal_close": 0,
+                            "acfe_clone_modal_button": "",
+                            "acfe_clone_modal_size": "large"
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/faq\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_6340247e5ccfd": {
+                    "key": "layout_6340247e5ccfd",
+                    "name": "hero",
+                    "label": "Hero",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6340247e5ccfe",
+                            "label": "Hero",
+                            "name": "hero",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "clone": [
+                                "group_634023b7034bb"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "acfe_settings": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/hero\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_62b872b52427c": {
+                    "key": "layout_62b872b52427c",
+                    "name": "icons_grid_1",
+                    "label": "Icons Grid 1",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62b872b52427d",
+                            "label": "Icons Grid",
+                            "name": "icons_grid",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_62b872487be61"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/icons_grid_1\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_62b22bb9a7b94": {
+                    "key": "layout_62b22bb9a7b94",
+                    "name": "icons_grid_2",
+                    "label": "Icons Grid 2",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62b22bb9a7b95",
+                            "label": "Icons Grid 2",
+                            "name": "icons_grid_2",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_62b225a878061"
+                            ],
+                            "display": "seamless",
+                            "layout": "",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/icons_grid_2\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_62b22bd3a7b96": {
+                    "key": "layout_62b22bd3a7b96",
+                    "name": "icons_grid_3",
+                    "label": "Icons Grid 3",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62b22bd3a7b97",
+                            "label": "Icons Grid 3",
+                            "name": "icons_grid_3",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_62b225ba16015"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/icons_grid_3\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_62b22a1876131": {
+                    "key": "layout_62b22a1876131",
+                    "name": "image_+_text",
+                    "label": "Image + Text",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62b22a1876132",
+                            "label": "Image + Text",
+                            "name": "image_+_text",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_62a1c6558552f"
+                            ],
+                            "display": "seamless",
+                            "layout": "",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/image_text\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_62b220c9977cc": {
+                    "key": "layout_62b220c9977cc",
+                    "name": "product_category_cards",
+                    "label": "Product Category Cards",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62b22120977cd",
+                            "label": "Product Category Cards",
+                            "name": "product_category_cards",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_62b3421c63c49"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/product_category_cards\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_62b342581a31d": {
+                    "key": "layout_62b342581a31d",
+                    "name": "product_cards",
+                    "label": "Product Cards",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62b342581a31e",
+                            "label": "Product Cards",
+                            "name": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_62b225caef837"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/product_cards\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_62cfdddc353b2": {
+                    "key": "layout_62cfdddc353b2",
+                    "name": "product_specifications",
+                    "label": "Product Specifications",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62cfdddc353b3",
+                            "label": "Product Specifications",
+                            "name": "product_specifications",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_62cfda96c3995"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/product_specifications\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_62e61b876362a": {
+                    "key": "layout_62e61b876362a",
+                    "name": "related_posts",
+                    "label": "Related Posts",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62e61b876362b",
+                            "label": "Related Posts",
+                            "name": "related_posts",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "clone": [
+                                "group_62e61a147cf37"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "acfe_settings": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/related_posts\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_62b22c24a7b9a": {
+                    "key": "layout_62b22c24a7b9a",
+                    "name": "select_service",
+                    "label": "Select Service",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62b22c24a7b9b",
+                            "label": "Select Service",
+                            "name": "select_service",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "clone": [
+                                "group_63418b62f1f72"
+                            ],
+                            "display": "seamless",
+                            "layout": "",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "acfe_settings": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/select_service\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_634273db7eef8": {
+                    "key": "layout_634273db7eef8",
+                    "name": "subscribe",
+                    "label": "Subscribe",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_634273db7eef9",
+                            "label": "Subscribe",
+                            "name": "subscribe",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "clone": [
+                                "group_634273aaa116b"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "acfe_settings": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/subscribe\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_634190e042f2b": {
+                    "key": "layout_634190e042f2b",
+                    "name": "sustainability_partner",
+                    "label": "Sustainability Partner",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_634190e042f2c",
+                            "label": "Sustainability Partner",
+                            "name": "sustainability_partner",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "clone": [
+                                "group_63418f9eef155"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "acfe_settings": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/sustainability_partner\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_63418c7c1ba7e": {
+                    "key": "layout_63418c7c1ba7e",
+                    "name": "team",
+                    "label": "Team",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_63418c7c1ba7f",
+                            "label": "Team",
+                            "name": "team",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_permissions": "",
+                            "clone": [
+                                "group_62b22c54e9558"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "acfe_seamless_style": 0,
+                            "acfe_clone_modal": 0,
+                            "acfe_clone_modal_close": 0,
+                            "acfe_clone_modal_button": "",
+                            "acfe_clone_modal_size": "large",
+                            "acfe_settings": {
+                                "acfcloneindex": {
+                                    "acfe_settings_location": "",
+                                    "acfe_settings_settings": {
+                                        "acfcloneindex": {
+                                            "acfe_settings_setting_type": "required",
+                                            "acfe_settings_setting_name": "",
+                                            "acfe_settings_setting_operator": "true",
+                                            "acfe_settings_setting_value": ""
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/team\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_62b22d0120cd7": {
+                    "key": "layout_62b22d0120cd7",
+                    "name": "text_centered",
+                    "label": "Text Centered",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62b22d0220cd8",
+                            "label": "Text Centered",
+                            "name": "text_centered",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_62b22c87a5bcd"
+                            ],
+                            "display": "seamless",
+                            "layout": "",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/text_centered\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_62d1375744454": {
+                    "key": "layout_62d1375744454",
+                    "name": "text_components",
+                    "label": "Text Left + Components",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62d1375744455",
+                            "label": "Text Left + Components",
+                            "name": "text_components",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_62b22c8bc6066"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/text_components\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_62b22d4220cdb": {
+                    "key": "layout_62b22d4220cdb",
+                    "name": "text_image",
+                    "label": "Text + Image",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62b22d4220cdc",
+                            "label": "Text + Image",
+                            "name": "text_image",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_62b22c8f82039"
+                            ],
+                            "display": "seamless",
+                            "layout": "",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/text_image\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_62b22d7c20cdd": {
+                    "key": "layout_62b22d7c20cdd",
+                    "name": "text_two_columns",
+                    "label": "Text Two Columns",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62b22d7c20cde",
+                            "label": "Text Two Columns",
+                            "name": "text_two_columns",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_62b22c96e91be"
+                            ],
+                            "display": "seamless",
+                            "layout": "",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/text_two_columns\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                },
+                "layout_62b22da220cdf": {
+                    "key": "layout_62b22da220cdf",
+                    "name": "timeline",
+                    "label": "Timeline",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_62b22da220ce0",
+                            "label": "Timeline",
+                            "name": "timeline",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_62b22c9c12c5e"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf-layouts\/timeline\/template.php",
+                    "acfe_flexible_render_style": "",
+                    "acfe_flexible_render_script": "",
+                    "acfe_flexible_modal_edit_size": "",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_settings": false,
+                    "acfe_flexible_settings_size": "medium",
+                    "acfe_flexible_category": false
+                }
+            },
+            "button_label": "Add Section",
+            "min": "",
+            "max": "",
+            "acfe_settings": "",
+            "acfe_flexible_hide_empty_message": false,
+            "acfe_flexible_empty_message": "",
+            "acfe_flexible_layouts_placeholder": false,
+            "acfe_flexible_layouts_state": false
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "products-services"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "case-studies"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_permissions": "",
+    "acfe_form": 1,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1669301211,
+    "acfe_categories": {
+        "flexible-content": "Flexible Content"
+    }
+}

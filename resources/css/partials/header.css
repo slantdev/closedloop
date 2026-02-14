@@ -1,0 +1,123 @@
+#site-header {
+  #top-header {
+    .social-icons {
+      @apply gap-x-2 lg:gap-x-4;
+    }
+    .social-icon {
+      svg {
+        @apply h-[18px] w-auto lg:h-[25px];
+      }
+    }
+  }
+  #main-header {
+    @apply py-5 bg-white transition-all ease-out duration-500 lg:py-5 2xl:py-10;
+    #site-logo {
+      @apply block relative w-auto h-9 lg:h-[62px] transition-all ease-out duration-500;
+      .site-logo {
+        @apply absolute top-0 left-0 opacity-0 h-9 lg:h-[62px] w-auto transition-all ease-out duration-500;
+      }
+    }
+    .header-nav {
+      @apply gap-x-4 transition-all ease-out duration-300;
+      .nav-icon {
+        @apply transition-all ease-out duration-300 h-9 w-9 lg:h-12 lg:w-12;
+      }
+    }
+    &.header-no-bg {
+      @apply bg-opacity-0;
+      #site-logo {
+        .site-logo {
+          &.logo-color {
+            @apply opacity-0;
+          }
+          &.logo-white {
+            @apply opacity-100;
+          }
+        }
+      }
+      .header-nav {
+        @apply text-white;
+      }
+    }
+    &.header-white-transparent {
+      @apply bg-opacity-80;
+      #site-logo {
+        .site-logo {
+          &.logo-color {
+            @apply opacity-100;
+          }
+          &.logo-white {
+            @apply opacity-0;
+          }
+        }
+      }
+      .header-nav {
+        @apply text-black;
+      }
+    }
+    &.header-white-opaque {
+      @apply bg-opacity-100;
+      #site-logo {
+        .site-logo {
+          &.logo-color {
+            @apply opacity-100;
+          }
+          &.logo-white {
+            @apply opacity-0;
+          }
+        }
+      }
+      .header-nav {
+        @apply text-black;
+      }
+    }
+  }
+  &.header-shrink {
+    #main-header {
+      @apply py-2 fixed top-0 left-0 right-0;
+      #site-logo {
+        @apply h-[36px];
+        .site-logo {
+          @apply w-auto h-[36px];
+        }
+      }
+      &.header-no-bg,
+      &.header-white-transparent,
+      &.header-white-opaque {
+        @apply bg-opacity-100;
+        #site-logo {
+          .site-logo {
+            &.logo-color {
+              @apply opacity-100;
+            }
+            &.logo-white {
+              @apply opacity-0;
+            }
+          }
+        }
+        .header-nav {
+          @apply text-black;
+        }
+      }
+      .header-nav {
+        @apply gap-x-3;
+        .nav-icon {
+          @apply w-9 h-9;
+        }
+      }
+    }
+  }
+}
+
+#page-header,
+#homepage-slider,
+#homepage-hero {
+  @apply -mt-[119px] lg:-mt-[180px];
+}
+
+#header-search {
+  @apply w-0 hidden;
+  &.show {
+    @apply block w-screen max-w-xs;
+  }
+}

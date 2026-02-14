@@ -1,0 +1,140 @@
+{
+    "key": "group_62a17b306405b",
+    "title": "Layout - Page Header",
+    "fields": [
+        {
+            "key": "field_62a17b8a8ed2d",
+            "label": "Nav Bar Type",
+            "name": "nav_bar_type",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "choices": {
+                "no-bg": "No BG",
+                "white-transparent": "White Transparent",
+                "white": "White Opaque"
+            },
+            "allow_null": 0,
+            "default_value": "white-transparent",
+            "layout": "horizontal",
+            "return_format": "value",
+            "acfe_settings": "",
+            "acfe_validate": ""
+        },
+        {
+            "key": "field_62a17c338ed2e",
+            "label": "Color Theme",
+            "name": "color_theme",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#1AAD90",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
+            "key": "field_62a1802bcc8ea",
+            "label": "Page Title",
+            "name": "page_title",
+            "type": "text",
+            "instructions": "To override the default page title",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62a17ff3cc8e9",
+            "label": "Hero Background",
+            "name": "hero_background",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "uploader": "",
+            "acfe_thumbnail": 0,
+            "return_format": "url",
+            "preview_size": "medium_large",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "library": "all"
+        },
+        {
+            "key": "field_62b8ceb648916",
+            "label": "Hero Overlay Color",
+            "name": "hero_overlay_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "rgba(0,0,0,.15)",
+            "enable_opacity": 1,
+            "return_format": "string"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1657957961,
+    "acfe_categories": {
+        "layout": "Layout"
+    }
+}

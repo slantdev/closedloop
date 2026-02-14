@@ -1,0 +1,33 @@
+@layer components {
+  select,
+  [type='text'],
+  textarea {
+    @apply block bg-gray-100 border border-gray-300 rounded-lg pl-6 pr-12 py-3 min-w-[260px] break-normal;
+  }
+  .selectdiv {
+    @apply relative;
+    select::-ms-expand {
+      /*To remove button from IE11 */
+      display: none;
+    }
+    select {
+      background-image: none;
+      @apply appearance-none border-gray-200;
+    }
+    &:after {
+      content: '>';
+      font: 18px 'Consolas', monospace;
+      @apply absolute transform rotate-90 right-4 top-[14px] pointer-events-none text-gray-400;
+    }
+  }
+  .button {
+    @apply px-8 py-3 rounded-md bg-coral text-white leading-tight inline-block text-sm transition duration-150 ease-in-out hover:brightness-110 focus:outline-none focus:ring-0;
+  }
+}
+
+.frm_style_formidable-style-2.with_frm_style
+  .subscribe-form
+  .frm_submit
+  button {
+  @apply bg-coral hover:shadow-lg transition m-0 border-0 hover:text-white;
+}
