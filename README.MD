@@ -1,101 +1,72 @@
-<p><img src="http://tailpress.io/images/tailpress100.svg" width="260" alt="TailPress"></p>
+# Closed Loop WordPress Theme
 
-[![GitHub release](https://img.shields.io/github/release/jeffreyvr/tailpress?include_prereleases=&sort=semver)](https://github.com/jeffreyvr/tailpress/releases/)
-[![License](https://img.shields.io/badge/License-MIT-blue)](#license)
-[![issues - tailpress](https://img.shields.io/github/issues/jeffreyvr/tailpress)](https://github.com/jeffreyvr/tailpress/issues)
+A custom, high-performance WordPress theme for Closed Loop, built on the TailPress boilerplate. This theme utilizes Tailwind CSS for rapid UI development and ACF Pro (Advanced Custom Fields) for a modular, component-based page-building experience.
 
-# Introduction
+## Features
 
-TailPress is a minimal boilerplate theme for WordPress using [Tailwind CSS](https://tailwindcss.com/).
+- **Tailwind CSS Integration:** Full utility-first CSS workflow.
+- **Modular Page Builder:** ACF Flexible Content layouts allow for dynamic page construction using pre-defined sections.
+- **Modern Asset Pipeline:** Uses `esbuild` for fast JS bundling and `PostCSS` for CSS processing.
+- **Responsive Design:** Mobile-first approach with Tailwind's responsive utilities.
+- **UI Components:** Integrated with Swiper.js for sliders and custom interactive elements.
 
-## Getting started
+## Getting Started
 
-### Using the installer
+### Prerequisites
 
-You can get started using the installer (using composer):
+- Node.js and npm
+- A local WordPress development environment (e.g., Local WP, Laravel Valet, or Docker)
 
-```bash
-composer global require jeffreyvanrossum/tailpress-installer
+### Installation
 
-tailpress new example-theme
-```
+1.  Clone the repository into your WordPress `wp-content/themes` directory.
+2.  Navigate to the theme directory:
+    ```bash
+    cd wp-content/themes/closedloop
+    ```
+3.  Install dependencies:
+    ```bash
+    npm install
+    ```
 
-*If you haven't already, make sure to place the `~/.composer/vendor/bin` directory in your `PATH` so the tailpress executable is found when you run the tailpress command in your terminal.*
+### Development
 
-You can optionally set the theme name.
-
-```bash
-tailpress new example-theme --name="Example Theme"
-```
-
-By default, TailPress uses esbuild and Tailwind's CLI for compiling. Rather use Laravel Mix?
-
-```bash
-tailpress new example-theme --compiler="mix"
-```
-
-You can also initialize a new Git repository (branch defaults to `main`):
+To start the development server and watch for changes in your CSS and JS files:
 
 ```bash
-tailpress new example-theme --name="Example Theme" --git --branch="main"
+npm run watch
 ```
 
-Once your theme is ready, don't forget to cd into the directory.
+If you are using a local proxy (e.g., `closedloop.local`), you can use BrowserSync:
 
-You will be asked if you would like to have WordPress installed as well. Keep in mind that you still need a local development environment for PHP and MySQL.
+```bash
+npm run watch-sync
+```
 
-### Regular method
+### Production
 
-* Clone repo `git clone https://github.com/jeffreyvr/tailpress.git && cd tailpress`
-* Run `rm -rf .git` to remove git (or `rmdir .git` for Windows)
-* Run `npm install`
-* Run `npm run watch` to start developing
+To generate minified and optimized assets for production:
 
-### General
+```bash
+npm run production
+```
 
-TailPress uses the [Tailwind CLI](https://tailwindcss.com/docs/installation#using-tailwind-cli), [PostCSS](https://postcss.org) and [esbuild](https://esbuild.github.io).
+## Theme Structure
 
-You will find the editable CSS and Javascript files within the `/resources` folder.
+- `/acf-json`: Synchronized ACF field group definitions in JSON format.
+- `/assets`: Compiled CSS, JS, and image assets.
+- `/inc`: Modular PHP functions, helpers, and theme configuration.
+- `/resources`: Source files for Tailwind CSS and JavaScript.
+- `/template-parts`: Reusable PHP template parts, including `sections` for the page builder and `components` for UI elements.
+- `template-parts/page-builder.php`: The main logic for rendering ACF Flexible Content sections.
 
-Before you use your theme in production, make sure you run `npm run production`.
+## Development Guidelines
 
-## NPM Scripts
+- **Template Parts:** Always use `get_template_part()` for including components and sections.
+- **ACF Fields:** When adding or modifying ACF fields, ensure the changes are synced to the `/acf-json` folder for version control.
+- **Styling:** Avoid writing custom CSS in files; prefer using Tailwind CSS utility classes directly in the PHP templates.
+- **JS:** Modularize JavaScript in `/resources/js/app.js` and use `esbuild` for bundling.
 
-There are several NPM scripts available. You'll find the full list in the `package.json` file onder "scripts". A script is executed through the terminal by running `npm run script-name`.
+## Credits
 
-| Script     | Description                                                                    |
-|------------|--------------------------------------------------------------------------------|
-| production | Creates a production (minified) build of app.js, app.css and editor-style.css. |
-| dev        | Creates a development build of app.js, app.css and editor-style.css.           |
-| watch      | Runs several watch scripts concurrently.                                       |
-| watch-sync | Runs several watch scripts concurrently and starts `browser-sync`.             |
-
-## Block editor support
-
-TailPress comes with support for the [block editor](https://wordpress.org/support/article/wordpress-editor/).
-
-A basic setup for `theme.json` is included. This also means that you need to at least use WordPress 5.8. If you wan't to support earlier WordPress versions, you can use an [older version](https://github.com/jeffreyvr/tailpress/tree/0.1.1) of TailPress instead.
-
-CSS-classes for alignment (full, wide etc.) are generated automatically. You can opt-out on this by removing the plugin from the `tailwind.config.js` file.
-
-To make the editing experience within the block editor more in line with the front end styling, a `editor-style.css` is generated.
-
-### Define theme colors and font sizes
-
-Several colors and font sizes are defined from the beginning. You can modify them in `theme.json`.
-
-## Links
-
-* [TailPress website](https://tailpress.io)
-* [Screencasts](https://www.youtube.com/playlist?list=PL6GBdOp044SHIOSCZejodwr1HcYsC43wG)
-* [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-* [Esbuild Documentation](https://esbuild.github.io)
-
-## Contributors
-
-* [Jeffrey van Rossum](https://github.com/jeffreyvr)
-* [All contributors](https://github.com/jeffreyvr/tailpress/graphs/contributors)
-
-## License
-
-MIT. Please see the [License File](/LICENSE) for more information.
+Developed by Slant Agency.
