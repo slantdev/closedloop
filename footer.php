@@ -51,7 +51,7 @@
             </div>
             <div class="w-full md:w-1/2 mt-8 md:mt-0">
               <?php if (have_rows('quick_link', 'option')) : ?>
-                <h4 class="font-bold uppercase mb-6">Quicklink</h4>
+                <h4 class="font-bold uppercase mb-6">Quick Links</h4>
                 <ul class="grid grid-cols-1 gap-2 text-base font-thin">
                   <?php while (have_rows('quick_link', 'option')) : the_row(); ?>
                     <li><a href="<?php echo get_sub_field('quick_link_item')['url']; ?>" class="hover:underline"><?php echo get_sub_field('quick_link_item')['title']; ?></a></li>
