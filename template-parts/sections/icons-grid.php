@@ -1,6 +1,14 @@
 <?php
 include get_template_directory() . '/template-parts/layout/section-settings.php';
 include get_template_directory() . '/template-parts/components/heading-vars.php';
+
+/** @var string $section_id */
+/** @var string $section_class */
+/** @var string $section_style */
+/** @var string $padding_top */
+/** @var string $padding_bottom */
+/** @var string $loop_overlay_tr */
+/** @var string $loop_overlay_br */
 ?>
 <!-- Icons Grid -->
 <section id="<?php echo $section_id ?>" class="section-scroll" style="<?php echo $section_style ?>">

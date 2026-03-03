@@ -12,9 +12,9 @@
   #main-header {
     @apply py-5 bg-white transition-all ease-out duration-500 lg:py-5 2xl:py-10;
     #site-logo {
-      @apply block relative w-auto h-9 lg:h-[62px] transition-all ease-out duration-500;
+      @apply block relative w-[116px] 2xl:w-[200px] h-9 2xl:h-[62px] transition-all ease-out duration-500 shrink-0;
       .site-logo {
-        @apply absolute top-0 left-0 opacity-0 h-9 lg:h-[62px] w-auto transition-all ease-out duration-500;
+        @apply absolute top-0 left-0 opacity-0 h-9 2xl:h-[62px] w-auto transition-all ease-out duration-500;
       }
     }
     .header-nav {
@@ -28,15 +28,20 @@
       #site-logo {
         .site-logo {
           &.logo-color {
-            @apply opacity-0;
+            @apply opacity-100;
           }
           &.logo-white {
-            @apply opacity-100;
+            @apply opacity-0;
           }
         }
       }
       .header-nav {
-        @apply text-white;
+        @apply text-black;
+        > .main-menu {
+          > ul > li > a {
+            @apply text-black;
+          }
+        }        
       }
     }
     &.header-white-transparent {
@@ -53,6 +58,11 @@
       }
       .header-nav {
         @apply text-black;
+        > .main-menu {
+          > ul > li > a {
+            @apply text-black;
+          }
+        }
       }
     }
     &.header-white-opaque {
@@ -69,6 +79,11 @@
       }
       .header-nav {
         @apply text-black;
+        > .main-menu {
+          > ul > li > a {
+            @apply text-black;
+          }
+        }        
       }
     }
   }
@@ -95,9 +110,14 @@
             }
           }
         }
-        .header-nav {
-          @apply text-black;
-        }
+      .header-nav {
+        @apply text-black;
+        > .main-menu {
+          > ul > li > a {
+            @apply text-black;
+          }
+        }        
+      }
       }
       .header-nav {
         @apply gap-x-3;
@@ -109,6 +129,9 @@
   }
 }
 
+#main-header .main-menu li.has-subsubmenu:hover > .subsubmenu-flyout {
+  display: block;
+}
 #page-header,
 #homepage-slider,
 #homepage-hero {

@@ -15,6 +15,14 @@ if ($cards_slider) {
     $swiper_button_style = '';
   }
 }
+
+/** @var string $section_id */
+/** @var string $section_class */
+/** @var string $section_style */
+/** @var string $padding_top */
+/** @var string $padding_bottom */
+/** @var string $loop_overlay_tr */
+/** @var string $loop_overlay_br */
 ?>
 
 <section id="<?php echo $section_id ?>" class="<?php echo $section_class ?>" style="<?php echo $section_style ?>">

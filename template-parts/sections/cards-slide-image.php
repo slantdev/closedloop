@@ -8,6 +8,14 @@ $swiper_nav_style = 'background-color: rgba(0,0,0,.5)';
 if ($color_theme) {
   $swiper_nav_style = 'background-color: ' . $color_theme . ';';
 }
+
+/** @var string $section_id */
+/** @var string $section_class */
+/** @var string $section_style */
+/** @var string $padding_top */
+/** @var string $padding_bottom */
+/** @var string $loop_overlay_tr */
+/** @var string $loop_overlay_br */
 ?>
 <section id="<?php echo $section_id ?>" class="<?php echo $section_class ?>" style="<?php echo $section_style ?>">
   <div class="container mx-auto relative <?php echo $padding_top . ' ' . $padding_bottom ?>">

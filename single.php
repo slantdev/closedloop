@@ -11,7 +11,7 @@ get_template_part('template-parts/page-builder');
 
 <?php
 $post_type = get_post_type();
-$terms = get_the_terms($post->ID, 'category');
+$terms = get_the_terms(get_the_ID(), 'category');
 $terms_array = array(join(', ', wp_list_pluck($terms, 'slug')));
 $args = array(
   'post_type' => 'post',
