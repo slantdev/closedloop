@@ -155,6 +155,13 @@ function cl_hero($atts = array())
   return $output;
 }
 
+/** @var string $section_id */
+/** @var string $section_class */
+/** @var string $section_style */
+/** @var string $padding_top */
+/** @var string $padding_bottom */
+/** @var string $loop_overlay_tr */
+/** @var string $loop_overlay_br */
 ?>
 <section id="homepage-hero-2" class="relative h-screen overflow-hidden" style="<?php echo $section_style ?>">
   <div class="absolute left-0 right-0 bottom-0 w-full">

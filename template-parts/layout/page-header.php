@@ -84,7 +84,7 @@ $rows = get_field('page_nav', $the_id)['page_navigation'];
 $page_nav_bg = get_field('page_nav_bg', $the_id);
 //echo $page_nav_bg;
 if ($rows) {
-  echo '<section id="scrollnav" class="sticky top-[52px] z-40">
+  echo '<section id="scrollnav" class="sticky top-[52px] lg:top-[64px] xl:top-[68px] 2xl:top-[72px] z-40">
       <div class="py-6 overflow-x-auto" style="background-color: ' . $page_nav_bg . '">
         <div class="container mx-auto">
           <menu>

@@ -8,6 +8,14 @@ $posts_per_page = $blog_settings['posts_per_page'] ?? 3;
 // if (!$posts_per_page) {
 //   $posts_per_page = '-1';
 // }
+
+/** @var string $section_id */
+/** @var string $section_class */
+/** @var string $section_style */
+/** @var string $padding_top */
+/** @var string $padding_bottom */
+/** @var string $loop_overlay_tr */
+/** @var string $loop_overlay_br */
 ?>
 <!-- Blog Posts -->
 <section id="<?php echo $section_id ?>" class="<?php echo $section_class ?>" style="<?php echo $section_style ?>">
@@ -122,7 +130,7 @@ $posts_per_page = $blog_settings['posts_per_page'] ?? 3;
             while ($the_query->have_posts()) {
               $the_query->the_post();
               $excerpt = wp_trim_words(get_the_excerpt(), $num_words = 12, $more = null);
-              $thumbnail = get_the_post_thumbnail_url($postID, 'large');
+              $thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'large');
               if (!$thumbnail) {
                 $thumbnail = '';
               }

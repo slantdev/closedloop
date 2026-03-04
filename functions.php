@@ -44,7 +44,6 @@ function closedloop_enqueue_scripts()
   $theme = wp_get_theme();
   wp_enqueue_style('swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css', array(), '8.2.2');
   wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', array(), '8.2.2');
-  //wp_enqueue_script('tw-elements', 'https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js', array(), $theme->get('Version'));
   wp_enqueue_script('tw-elements', closedloop_asset('js/tw-elements.js'), array('jquery'), $theme->get('Version'));
   wp_enqueue_style('typekit', 'https://use.typekit.net/qbs4azc.css', array(), $theme->get('Version'));
   wp_enqueue_style('closedloop', closedloop_asset('css/app.css'), array(), $theme->get('Version'));
@@ -62,7 +61,7 @@ function closedloop_admin_styles()
   wp_enqueue_style('typekit', 'https://use.typekit.net/qbs4azc.css', array(), $theme->get('Version'));
   //wp_enqueue_style('admin_css', get_template_directory_uri() . '/css/admin-style.css', false, '1.0.0');
   if (($current_page->post_type === 'page' && ($pagenow === 'post-new.php' || $pagenow === 'post.php'))) {
-    wp_enqueue_style('acf_layouts', closedloop_asset('/css/editor-style.css'), false, $theme->get('Version'));
+    wp_enqueue_style('acf_layouts', closedloop_asset('/css/editor-style.css'), array(), $theme->get('Version'));
   }
 }
 
@@ -85,9 +84,10 @@ function closedloop_asset($path)
 /**
  * Adds option 'li_class' to 'wp_nav_menu'.
  *
- * @param string  $classes String of classes.
- * @param mixed   $item The curren item.
- * @param WP_Term $args Holds the nav menu arguments.
+ * @param array   $classes Array of the CSS classes that are applied to the menu item's `<li>` element.
+ * @param mixed   $item    The current item.
+ * @param mixed   $args    Holds the nav menu arguments.
+ * @param int     $depth   Depth of menu item.
  *
  * @return array
  */
@@ -109,9 +109,9 @@ add_filter('nav_menu_css_class', 'closedloop_nav_menu_add_li_class', 10, 4);
 /**
  * Adds option 'submenu_class' to 'wp_nav_menu'.
  *
- * @param string  $classes String of classes.
- * @param mixed   $item The curren item.
- * @param WP_Term $args Holds the nav menu arguments.
+ * @param array   $classes Array of the CSS classes that are applied to the menu `<ul>` element.
+ * @param mixed   $args    Holds the nav menu arguments.
+ * @param int     $depth   Depth of menu item.
  *
  * @return array
  */

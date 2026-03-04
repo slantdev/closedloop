@@ -80,30 +80,17 @@
         $header_class = 'header-white-opaque';
       }
 
-      $email_link = get_field('email_link', 'option');
-      $phone_number_link = get_field('phone_number_link', 'option');
+      $icon_container_class = isset($icon_container_class) ? $icon_container_class : '';
       ?>
       <header id="main-header" class="relative z-50 <?php echo $header_class ?>">
         <div class="mx-auto px-4 md:px-8 lg:px-12">
           <div class="flex justify-between items-center relative">
-            <div class="w-full">
-              <a id="site-logo" href="<?php echo get_bloginfo('url'); ?>" class="block relative">
-                <img class="site-logo logo-color" src="<?php echo closedloop_asset('images/logo-closed-loop-color.png')  ?>" width="200px" height="62px" alt="Logo Closed Loop" />
-                <img class="site-logo logo-white" src="<?php echo closedloop_asset('images/logo-closed-loop-white.png') ?>" width="200px" height="62px" alt="Logo Closed Loop" />
-              </a>
-            </div>
-            <?php $icon_container_class = isset($icon_container_class) ? $icon_container_class : ''; ?>
+            <a id="site-logo" href="<?php echo get_bloginfo('url'); ?>" class="block relative">
+              <img class="site-logo logo-color" src="<?php echo closedloop_asset('images/logo-closed-loop-color.png')  ?>" width="200px" height="62px" alt="Logo Closed Loop" />
+              <img class="site-logo logo-white" src="<?php echo closedloop_asset('images/logo-closed-loop-white.png') ?>" width="200px" height="62px" alt="Logo Closed Loop" />
+            </a>
             <div class="header-nav flex flex-nowrap items-center gap-x-4 <?php echo $icon_container_class ?>">
-              <?php if ($email_link) : ?>
-                <a href="mailto:<?php echo $email_link ?>" target="_blank" class="hidden md:inline-block">
-                  <?php echo cl_icon(array('icon' => 'email', 'group' => 'utility', 'size' => '48', 'class' => 'nav-icon')) ?>
-                </a>
-              <?php endif; ?>
-              <?php if ($phone_number_link) : ?>
-                <a href="tel:<?php echo $phone_number_link ?>" target="_blank" class="hidden md:inline-block">
-                  <?php echo cl_icon(array('icon' => 'phone', 'group' => 'utility', 'size' => '48', 'class' => 'nav-icon')) ?>
-                </a>
-              <?php endif; ?>
+              <?php get_template_part('template-parts/utilities/main-menu'); ?>
               <div class="hidden md:flex leading-none w-12 h-12 relative">
                 <button id="header-search-button" class="inline-block" type="button">
                   <?php echo cl_icon(array('icon' => 'search', 'group' => 'utility', 'size' => '48', 'class' => 'nav-icon')) ?>
@@ -117,7 +104,6 @@
                   </form>
                 </div>
               </div>
-              <?php get_template_part('template-parts/utilities/mega-menu'); ?>
               <button class="block lg:ml-6 xl:hidden" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><?php echo cl_icon(array('icon' => 'menu', 'group' => 'utility', 'size' => '48', 'class' => 'nav-icon')) ?></button>
             </div>
           </div>

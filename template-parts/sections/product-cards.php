@@ -7,6 +7,15 @@ $buttons = get_sub_field('buttons');
 $enable_product_link = get_sub_field('enable_product_link');
 $show_select_filter = get_sub_field('show_select_filter');
 $term_id = $product_category->term_id;
+
+/** @var string $section_id */
+/** @var string $section_class */
+/** @var string $section_style */
+/** @var string $padding_top */
+/** @var string $padding_bottom */
+/** @var string $loop_overlay_tr */
+/** @var string $loop_overlay_br */
+/** @var string $color_theme */
 ?>
 
 <section id="<?php echo $section_id ?>" class="<?php echo $section_class ?>" style="<?php echo $section_style ?>">
