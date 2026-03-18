@@ -20,7 +20,7 @@
     .header-nav {
       @apply gap-x-4 transition-all ease-out duration-300;
       .nav-icon {
-        @apply transition-all ease-out duration-300 h-9 w-9 lg:h-12 lg:w-12;
+        @apply transition-all ease-out duration-300 h-10 w-10;
       }
     }
     &.header-no-bg {
@@ -41,7 +41,7 @@
           > ul > li > a {
             @apply text-black;
           }
-        }        
+        }
       }
     }
     &.header-white-transparent {
@@ -83,7 +83,7 @@
           > ul > li > a {
             @apply text-black;
           }
-        }        
+        }
       }
     }
   }
@@ -110,19 +110,19 @@
             }
           }
         }
-      .header-nav {
-        @apply text-black;
-        > .main-menu {
-          > ul > li > a {
-            @apply text-black;
+        .header-nav {
+          @apply text-black;
+          > .main-menu {
+            > ul > li > a {
+              @apply text-black;
+            }
           }
-        }        
-      }
+        }
       }
       .header-nav {
         @apply gap-x-3;
         .nav-icon {
-          @apply w-9 h-9;
+          @apply w-10 h-10;
         }
       }
     }

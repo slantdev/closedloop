@@ -26,7 +26,7 @@
     ?>
     <div id="site-header" class="z-50">
       <div id="top-header" class="bg-white relative z-50 border-b border-gray-200 border-solid">
-        <div class="top-header--inner mx-auto py-2 md:py-1.5 px-4 lg:px-12">
+        <div class="top-header--inner mx-auto py-2 md:py-1.5 px-4 md:px-8 xl:px-12">
           <div class="flex justify-between items-center gap-x-4">
             <div class="social-icons flex leading-8 text-black items-end">
               <?php if ($facebook_link) : ?>
@@ -83,7 +83,7 @@
       $icon_container_class = isset($icon_container_class) ? $icon_container_class : '';
       ?>
       <header id="main-header" class="relative z-50 <?php echo $header_class ?>">
-        <div class="mx-auto px-4 md:px-8 lg:px-12">
+        <div class="mx-auto px-4 md:px-8 xl:px-12">
           <div class="flex justify-between items-center relative">
             <a id="site-logo" href="<?php echo get_bloginfo('url'); ?>" class="block relative">
               <img class="site-logo logo-color" src="<?php echo closedloop_asset('images/logo-closed-loop-color.png')  ?>" width="200px" height="62px" alt="Logo Closed Loop" />
@@ -93,7 +93,7 @@
               <?php get_template_part('template-parts/utilities/main-menu'); ?>
               <div class="hidden md:flex leading-none w-12 h-12 relative">
                 <button id="header-search-button" class="inline-block" type="button">
-                  <?php echo cl_icon(array('icon' => 'search', 'group' => 'utility', 'size' => '48', 'class' => 'nav-icon')) ?>
+                  <?php echo cl_icon(array('icon' => 'search', 'group' => 'utility', 'size' => '36', 'class' => 'nav-icon')) ?>
                 </button>
                 <div id="header-search" class="absolute transition duration-300 right-0 px-0 top-0" style="z-index: 100;">
                   <form id="header-searchform" class="flex bg-white border border-gray-100 shadow-xl rounded-full inline-form-pill" method="get" action="<?php echo esc_url(home_url('/')); ?>">
@@ -104,7 +104,7 @@
                   </form>
                 </div>
               </div>
-              <button class="block lg:ml-6 xl:hidden" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><?php echo cl_icon(array('icon' => 'menu', 'group' => 'utility', 'size' => '48', 'class' => 'nav-icon')) ?></button>
+              <button class="block 2lg:ml-6 2lg:hidden" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><?php echo cl_icon(array('icon' => 'menu', 'group' => 'utility', 'size' => '48', 'class' => 'nav-icon')) ?></button>
             </div>
           </div>
         </div>
