@@ -104,7 +104,7 @@
                   </form>
                 </div>
               </div>
-              <button class="block 2lg:ml-6 2lg:hidden" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><?php echo cl_icon(array('icon' => 'menu', 'group' => 'utility', 'size' => '48', 'class' => 'nav-icon')) ?></button>
+              <button class="block lg:ml-6 lg:hidden" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><?php echo cl_icon(array('icon' => 'menu', 'group' => 'utility', 'size' => '48', 'class' => 'nav-icon')) ?></button>
             </div>
           </div>
         </div>
