@@ -507,6 +507,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
 @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
@@ -7242,6 +7248,10 @@ select, [type='text'], textarea {
   height: 1rem;
 }
 
+.h-9 {
+  height: 2.25rem;
+}
+
 .max-h-\[512px\] {
   max-height: 512px;
 }
@@ -7348,6 +7358,10 @@ select, [type='text'], textarea {
 
 .w-80 {
   width: 20rem;
+}
+
+.w-9 {
+  width: 2.25rem;
 }
 
 .min-w-\[200px\] {
@@ -7482,10 +7496,6 @@ select, [type='text'], textarea {
 
 .flex-grow {
   flex-grow: 1;
-}
-
-.grow-0 {
-  flex-grow: 0;
 }
 
 .-translate-y-1\/2 {
@@ -19131,11 +19141,6 @@ article > *:not(.entry-content), .entry-content > * {
          column-gap: 2.5rem;
   }
 
-  .lg\:gap-x-8 {
-    -moz-column-gap: 2rem;
-         column-gap: 2rem;
-  }
-
   .lg\:border-l {
     border-left-width: 1px;
   }
@@ -20240,6 +20245,25 @@ article > *:not(.entry-content), .entry-content > * {
   }
 }
 
+@media (min-width: 1200px) {
+  .\32lg\:ml-6 {
+    margin-left: 1.5rem;
+  }
+
+  .\32lg\:block {
+    display: block;
+  }
+
+  .\32lg\:hidden {
+    display: none;
+  }
+
+  .\32lg\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
 @media (min-width: 1280px) {
   .xl\:-left-24 {
     left: -6rem;
@@ -20255,10 +20279,6 @@ article > *:not(.entry-content), .entry-content > * {
 
   .xl\:-right-16 {
     right: -4rem;
-  }
-
-  .xl\:top-\[72px\] {
-    top: 72px;
   }
 
   .xl\:top-\[68px\] {
@@ -23539,18 +23559,6 @@ article > *:not(.entry-content), .entry-content > * {
 }
 
 @media (min-width: 1536px) {
-  .\32xl\:top-\[62px\] {
-    top: 62px;
-  }
-
-  .\32xl\:top-\[68px\] {
-    top: 68px;
-  }
-
-  .\32xl\:top-\[76px\] {
-    top: 76px;
-  }
-
   .\32xl\:top-\[72px\] {
     top: 72px;
   }
