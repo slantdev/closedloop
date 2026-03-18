@@ -1,5 +1,5 @@
 <?php if (have_rows('mega_menu_items', 'option')) : ?>
-  <nav class="main-menu hidden 2lg:block mr-4">
+  <nav class="main-menu hidden lg:block mr-4">
     <ul class="flex items-center gap-x-6 2xl:gap-x-8">
       <?php while (have_rows('mega_menu_items', 'option')) : the_row(); ?>
         <?php
